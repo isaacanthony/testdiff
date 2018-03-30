@@ -1,7 +1,4 @@
-# coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'testdiff/version'
+require_relative 'lib/testdiff/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'testdiff'
@@ -15,8 +12,7 @@ Gem::Specification.new do |spec|
   spec.files         = `git ls-files -z`.split("\x0")
   spec.executables   = ['testdiff']
   spec.require_paths = ['lib']
-
-  spec.add_development_dependency 'bundler', '~> 1.11'
-  spec.add_development_dependency 'rubocop', '~> 0.40'
-  spec.add_development_dependency 'rspec', '~> 3.0'
+  spec.add_development_dependency 'bundler', '~> 1.16'
+  spec.add_development_dependency 'rspec', '~> 3.7'
+  spec.add_development_dependency 'rubocop', '~> 0.54'
 end

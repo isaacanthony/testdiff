@@ -8,7 +8,7 @@ module Testdiff
 
   def run(tests)
     if tests.empty?
-      run(%w(rubocop rspec))
+      run(%w[rubocop rspec])
     else
       tests.each do |test|
         run_test(test)
